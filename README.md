@@ -13,6 +13,8 @@ pip install vniencoder
 ## Cách dùng
 
 ```python
+from vniencoder import VniEncoder
+
 VniEncoder = VniEncoder()  # Tạo đối tượng
 
 result = VniEncoder.encode("bí chị cửa!!")  # Gọi hàm encode
