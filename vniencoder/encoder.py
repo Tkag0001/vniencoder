@@ -100,6 +100,9 @@ class VniEncoder:
         words = vni_text.split()
         decoded_words = []
         for word in words:
-            decoded_word = bogo.process_sequence(word, rules=bogo.get_vni_definition())
+            try:
+                decoded_word = bogo.process_sequence(word, rules=bogo.get_vni_definition())
+            except:
+                decoded_word = word
             decoded_words.append(decoded_word)
         return ' '.join(decoded_words)
